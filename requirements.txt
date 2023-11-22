@@ -1,4 +1,5 @@
 spotipy
 streamlit
-import io
+PIL
+io
 requests
