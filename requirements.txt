@@ -1,5 +1,4 @@
 spotipy
 streamlit
-PIL
-io
+Pillow==8.4.0
 requests
