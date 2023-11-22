@@ -1,2 +1,5 @@
 spotipy
 streamlit
+PIL
+io
+requests
