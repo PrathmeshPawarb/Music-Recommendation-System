@@ -57,8 +57,8 @@ def display_recommendations(recommended_songs):
 
 
 def main():
-    st.title("Yoga, Meditation and Devotional Songs Recommendation System using spotify direct API")
-
+    #st.title("Yoga, Meditation and Devotional Songs Recommendation System using spotify direct API")
+    st.markdown("<h1 style='color: green;'>Yoga, Meditation and Devotional Songs Recommendation System using spotify API ExcelR Project</h1>", unsafe_allow_html=True)
     # Initialize variables
     tempo = atmosphere = religion = None
 
