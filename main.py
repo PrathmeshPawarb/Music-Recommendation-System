@@ -34,12 +34,26 @@ def recommend_songs(mood, tempo=None, atmosphere=None, religion=None):
 def display_recommendations(recommended_songs):
     st.subheader("Recommended Songs:")
     for i, song in enumerate(recommended_songs, start=1):
+        # Display song information
         st.write(
             f"{i}. "
             f"<span style='color:red; font-weight:bold;'>{song['name']}</span> "
             f"by {', '.join([artist['name'] for artist in song['artists']])}",
             unsafe_allow_html=True
         )
+
+        # Create a layout with two columns
+        col1, col2 = st.columns(2)
+
+        # Display album cover image with a smaller size in the first column
+        image_url = song['album']['images'][0]['url']
+        image = Image.open(BytesIO(requests.get(image_url).content))
+        col1.image(image, caption=f"Album Cover: {song['name']}", width=100)
+
+        # Display audio preview and add a Play button in the second column
+        col2.audio(song['preview_url'], format='audio/mp3', start_time=0)
+
+
 def main():
     st.title("Yoga, Meditation, and Devotional Songs Recommendation System")
 
