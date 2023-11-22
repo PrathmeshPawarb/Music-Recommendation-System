@@ -57,7 +57,7 @@ def display_recommendations(recommended_songs):
 
 
 def main():
-    st.title("Yoga, Meditation, and Devotional Songs Recommendation System")
+    st.title("Yoga, Meditation and Devotional Songs Recommendation System using spotify direct API")
 
     # Initialize variables
     tempo = atmosphere = religion = None
