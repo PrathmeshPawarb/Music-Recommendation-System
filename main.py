@@ -34,8 +34,12 @@ def recommend_songs(mood, tempo=None, atmosphere=None, religion=None):
 def display_recommendations(recommended_songs):
     st.subheader("Recommended Songs:")
     for i, song in enumerate(recommended_songs, start=1):
-        st.write(f"{i}. {song['name']} by {', '.join([artist['name'] for artist in song['artists']])}")
-
+        st.write(
+            f"{i}. "
+            f"<span style='color:red; font-weight:bold;'>{song['name']}</span> "
+            f"by {', '.join([artist['name'] for artist in song['artists']])}",
+            unsafe_allow_html=True
+        )
 def main():
     st.title("Yoga, Meditation, and Devotional Songs Recommendation System")
 
