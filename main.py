@@ -14,7 +14,7 @@ client_secret = '85c41bf2ac4e43efa3a384d6e9197abd'
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
 
 def search_songs(query):
-    results = sp.search(q=query, type='track', limit=10)
+    results = sp.search(q=query, type='track', limit=20)
     return results['tracks']['items']
 
 def recommend_songs(mood, tempo=None, atmosphere=None, religion=None):
