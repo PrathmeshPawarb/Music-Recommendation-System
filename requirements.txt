@@ -3,5 +3,4 @@ streamlit
 Pillow==8.4.0
 requests
 pandas
-random
 get_content_based_recommendations
